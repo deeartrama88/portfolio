@@ -1,0 +1,295 @@
+.container {
+  background-color: white;
+}
+red {
+  color: #ECB329;
+}
+/*
+	 <defs>
+		<style type="text/css">
+			.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+			.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+			.st0,
+			.st1 {
+				stroke-dasharray: 900;
+				stroke-dashoffset: 0;
+
+				-webkit-animation: dash 2s linear forwards;
+				-o-animation: dash 2s linear forwards;
+				-moz-animation: dash 2s linear forwards;
+				animation: dash 2s linear forwards;
+			}
+
+			@keyframes dash {
+				from {
+					stroke-dashoffset: 900;
+				}
+				to {
+					stroke-dashoffset: 0;
+				}
+			}
+		</style>
+	 </defs>
+
+
+
+*/
+body {
+  font-family: "Ubuntu-Regular";
+  min-height: 1000px;
+}
+/*________________HEADER NAVIGATION_______________*/
+header {
+  -webkit-animation: fadeInFast 1s linear;
+          animation: fadeInFast 1s linear;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+.header_logotype {
+  padding-top: 60px;
+  text-align: center;
+}
+/*_________________SECTION WITH ICONS______________*/
+.flex_box_container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.tech_icons {
+  min-height: 200px;
+  position: relative;
+  top: 50px;
+}
+.tech_icons .icon {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+.tech_icons .icon:nth-child(2) {
+  -webkit-flex-basis: 23%;
+      -ms-flex-preferred-size: 23%;
+          flex-basis: 23%;
+}
+/*_________________SECTION ABOUT ME SHORT______________*/
+.about_me_short {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.about_me_short .about_me_short_photo {
+  position: relative;
+  overflow: hidden;
+  width: 342px;
+  margin: auto;
+  -webkit-animation: fade_scale_in;
+          animation: fade_scale_in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.about_me_short .about_me_short_photo img {
+  width: 100%;
+  opacity: 1;
+  z-index: 0;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+.about_me_short .about_me_short_desc {
+  -webkit-flex-basis: 65%;
+      -ms-flex-preferred-size: 65%;
+          flex-basis: 65%;
+  padding-left: 50px;
+  border-left: 5px solid #E6E6E6;
+  color: #676767;
+  font-size: 45px;
+}
+.about_me_short .about_me_short_desc p {
+  margin: 0;
+}
+name {
+  color: #ED4D49;
+  font-size: 60px;
+}
+pr {
+  color: #5490EA;
+  font-size: 60px;
+}
+.about_me_photo_animate_layer {
+  width: 100%;
+  height: 100%;
+  background: #66BDE6;
+  position: absolute;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+  opacity: 1;
+  z-index: 1;
+}
+.about_me_photo_animate_layer:nth-of-type(2) {
+  background: #F38A8A;
+}
+@-webkit-keyframes fade_scale_in {
+  from {
+    -webkit-transform: scale(0) translate(1500px, 0);
+            transform: scale(0) translate(1500px, 0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0px, 0);
+            transform: scale(1) translate(0px, 0);
+  }
+}
+@keyframes fade_scale_in {
+  from {
+    -webkit-transform: scale(0) translate(1500px, 0);
+            transform: scale(0) translate(1500px, 0);
+  }
+  to {
+    -webkit-transform: scale(1) translate(0px, 0);
+            transform: scale(1) translate(0px, 0);
+  }
+}
+/* _______ help classes _________*/
+/*__________________MEDIA QUERY_________________*/
+@media screen and (max-width: 768px) {
+  #nav-icon2 {
+    display: block;
+  }
+  .header_nav ul {
+    display: none;
+    border-top: none;
+  }
+  .header_nav ul li {
+    width: 100%;
+    float: none;
+  }
+  .header_nav ul li:nth-child(1) {
+    width: 100%;
+  }
+  .header_nav ul li:nth-child(2) {
+    width: 100%;
+  }
+  .header_nav ul li:nth-child(3) {
+    width: 100%;
+  }
+  .header_nav ul li .sub_menu {
+    position: relative;
+    border-top: 2px solid orange;
+  }
+  .header_nav ul li .sub_menu li {
+    width: 100%;
+  }
+  .about_me_short .about_me_short_photo {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    text-align: center;
+  }
+  .about_me_short .about_me_short_photo img {
+    width: 50%;
+  }
+  .about_me_short .about_me_short_desc {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    padding-left: 0px;
+    border-left: none;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 2px solid orange;
+    text-align: center;
+  }
+  .tech_icons .icon {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    text-align: center;
+  }
+  .tech_icons .icon:nth-child(2) {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+.typing_type {
+  display: inline;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+  position: relative;
+  opacity: 0;
+}
+/*__________ TYPING TEXT FUNCTION___________*/
+.typing_animate_element {
+  text-transform: uppercase;
+  color: #525252;
+  display: none;
+  font-size: 60px;
+  line-height: 20px;
+  -webkit-animation-name: blinker;
+          animation-name: blinker;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  position: relative;
+  top: 3px;
+}
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@keyframes blinker {
+  0% {
+    opacity: 1.0;
+  }
+  50% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+@font-face {
+  /* Гарнитура шрифта */
+  font-family: "Comic_sans";
+  /* Путь к файлу со шрифтом */
+  src: url(../src/fonts/Qarmic_sans_Abridged.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Bold";
+  src: url(../src/fonts/Ubuntu-B.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Light";
+  src: url(../src/fonts/Ubuntu-L.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url(../src/fonts/Ubuntu-R.ttf);
+}
+@font-face {
+  font-family: "Ubuntu-Light-Italic";
+  src: url(../src/fonts/Ubuntu-LI.ttf);
+}
