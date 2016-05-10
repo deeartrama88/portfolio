@@ -3,11 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>test template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="src/css/font.css">
 	<link rel="stylesheet" href="src/css/bootstrap_grid.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="build/main.css">
 	<link rel="stylesheet" href="src/css/media.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+
 </head>
 <body>
 <header>
@@ -16,15 +19,15 @@
 
 	</nav>
 	<div class="container">
+
 		<div class="row">
-			<div class="header_logotype">
+
+			<div class="header_logotype"><!-- header logotype (svg) -->
 				<object>
 					<embed src="src/images/name_logo.svg">
 				</object>
 			</div><!-- # header logotype (svg) -->
 
-
-	
 		</div><!-- # row -->
 
 	</div><!-- # container -->
@@ -35,7 +38,6 @@
 	<div class="container">
 		<div class="flex_box_container">
 			<div class="about_me_short_photo">
-				<div class="about_me_photo_animate_layer"></div>
 				<div class="about_me_photo_animate_layer"></div>
 				<img src="src/images/2.jpg" alt="Tarasenko Denis">
 			</div>
@@ -71,11 +73,142 @@
 	</div>
 </section>
 
+<section class="about_me_tech">
+	<div class="container">
+		<div class="row">
+
+			<div class="separate_line"></div>
+				<div class="about_me_tech_wrapper">
+					
+					<span class="about_me_tech_title">Little bit about me:</span>
+
+					<div class="about_me_tech_text red">2 years experience </div>
+					<div class="about_me_tech_text text_gray">Usually in my work i use html5, css3, native js, js5 :) </div>
+					<div class="about_me_tech_text blue">For css3 use less/sass, for js5 use babel</div>
+					<div class="about_me_tech_text blue">To put it all together i use gulp, and git..</div>
+					<div class="about_me_tech_text text_gray">I like to work in a team, teamplayer ;)</div>
+					<div class="about_me_tech_text red">Basic knowledge of Angular.js</div>
+					<div class="about_me_tech_text blue">Basic knowledge of React.js</div>
+					<div class="about_me_tech_text red">Basic knowledge of Angular2.js</div>
+					
+				</div>
+			</div>
+		</div><!-- # row -->
+	</div><!-- # container -->
+</section>
+
+<section class="todo_angular">
+	<div class="container">
+		<div class="row">
+
+			<div class="todo_angular_wrap">
+				<div id="todo_angular_app">
+					
+					<span class="angular_todo_title">Simple ToDo list with <span class="red">Angular.js</span></span>
+
+					<div class="angular_todo_add">
+						<span class="angular_todo_add_title">Add new ToDo item:</span>
+						<form class="angular_todo_form">
+							<div class="angular_todo_form_status">
+								<label for="angular_todo_form_select">Status</label>
+								<select name="angular_todo_form_status" id="angular_todo_form_select">
+									<option value="normal">normal</option>
+									<option value="urgent">urgent</option>
+									<option value="low">low</option>
+								</select>
+							</div>
+							<div class="input_group">
+								<label for="angular_todo_form_title">Title</label>
+								<input type="text" name="angular_todo_form_title" id="angular_todo_form_title">
+								<span class="error">Title is required</span>
+							</div>
+							<div class="input_group">
+								<label for="angular_todo_form_desc">Description</label>
+								<textarea name="angular_todo_form_desc" id="angular_todo_form_desc" rows="4"></textarea>
+								<span class="error">Description is required</span>
+							</div>
+							<button class="form_submit_btn" id="angular_todo_form_submit">save</button>
+						</form>
+					</div>
+					
+					<span class="angular_todo_list_title">ToDo's list:</span>
+
+					<div class="angular_list">
+						<div class="list_item">
+							<div class="list_item_head">
+								<span class="list_item_head_title">Title</span>
+								<span class="list_item_status">Status</span>
+							</div>
+							<span class="list_item_title">Title 1</span>
+							<div class="list_item_desc">
+								<span class="list_item_desc_title">Description</span>
+								<span class="list_item_desc_text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium sapiente inventore architecto quos rem ut animi vel voluptatem soluta, velit nostrum eum hic, rerum dicta commodi tempore cupiditate enim officiis?
+								</span>
+							</div>
+							<div class="list_item_footer">
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		</div><!-- # row -->
+	</div><!-- # container -->
+</section>
+
+<div class="container">
+	<div class="counter">
+		<div class="number_wrapper">
+			<span id="min">00</span>:
+			<span id="sec">00</span>:
+			<span id="ms">00</span>
+		</div>
+		<button class="start">start</button>
+		<button class="stop">reset</button>
+	</div>
+</div>
+
+<!-- new animation button -->
+<div class="container">
+	<div class="new_anim">
+
+<svg class='new_svg' viewbox="0 0 100 100">
+  <path id="svg" fill="#1EB287" d="M4.125,2.021c3.411,0.669,6.662,1.307,9.813,0.375c1.726-0.51,2.205-1.132,2.625-0.812
+	C17.55,2.335,14.921,5.794,13,12.958c-0.404,1.507-0.978,3.088-2.125,6.25c-0.812,2.238-1.191,3.125-1.688,3.125
+	c-0.643,0-1.087-1.488-2.063-4.563C6.704,16.442,5.527,12.735,5,11.208c-2.045-5.92-4.511-8.519-3.625-9.438
+	C1.72,1.414,2.242,1.652,4.125,2.021z">
+    <!-- <animate id="animateUp" 
+             attributeName="d" 
+             dur="1000ms" 
+             begin="indefinite"
+             repeatCount="1"
+             fill="freeze"
+             from="M4.125,2.021c3.411,0.669,6.662,1.307,9.813,0.375c1.726-0.51,2.205-1.132,2.625-0.812
+	C17.55,2.335,14.921,5.794,13,12.958c-0.404,1.507-0.978,3.088-2.125,6.25c-0.812,2.238-1.191,3.125-1.688,3.125
+	c-0.643,0-1.087-1.488-2.063-4.563C6.704,16.442,5.527,12.735,5,11.208c-2.045-5.92-4.511-8.519-3.625-9.438
+	C1.72,1.414,2.242,1.652,4.125,2.021z;"
+             to=" M8.875,0.833c0.199,0.013,0.375,0.288,1.563,4.688c0.595,2.206,0.653,2.515,0.875,3.312
+	c0.899,3.229,2.13,5.988,3.25,8.5c1.364,3.057,1.981,4.03,1.5,4.625c-0.466,0.576-1.391,0.092-4.813-0.188
+	c-1.95-0.159-3.543-0.289-5.5-0.063c-2.426,0.281-2.915,0.82-3.375,0.438c-1.128-0.939,1.297-4.615,3.375-10.938
+	C7.74,5.151,8.06,0.779,8.875,0.833z;" /> -->
+  </path>
+</svg>
+
+<div class="new_svg"></div>
 
 
+
+	</div>
+</div>
 
 
 <script src="build/jquery.js"></script>
+<script src="build/jquery_animate_scale_rotate.js"></script>
+<script src="build/jquery.waypoints.js"></script>
 <script src="build/lodash.js"></script>
 <script src="build/main.js"></script>
 
