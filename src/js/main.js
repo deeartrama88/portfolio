@@ -223,6 +223,17 @@
                     $(this_error).slideUp('slow');
                 }
             };
+
+            for(let i = 0; i < textareas.length; i++) {
+                let this_error = $(textareas[i]).siblings('.error')[0]; 
+
+                if(!min_length($(textareas[i]), 2)) {
+                    this_error.innerHTML = 'Min length 2 simbols';
+                    $(this_error).slideDown('slow');
+                }else{
+                    $(this_error).slideUp('slow');
+                }
+            }
         });
 
     }
@@ -232,6 +243,42 @@
 
     // form_validate_required($('#angular_todo_form_title'));
     // min_length($('#angular_todo_form_title'), 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -316,20 +363,85 @@
 
     let new_counter = new Counter($('.start')[0], $('.stop')[0], $('#ms')[0], $('#sec')[0], $('#min')[0]);
 
-    var photo = $('#svg'); 
-    TweenLite.to(photo, 2, {attr{d:50}}); 
-
-    // $('#animateUp')[0].beginElement();
 
 
+    var animate_check = true;
+
+    var button = $('#arrow_down_1')[0];
+    $(button).on('click', function(){
+       if(animate_check) {
+            resetPath2();
+            animate_check = false;
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+       }else{
+            animatePath2();
+            animate_check = true;
+            $('html, body').animate({
+                scrollTop: $(document).height()
+            }, 500);
+       }
+    });
+
+    var svg2 = document.getElementById('arrow_down');
+    var path2 = Snap.select('#arrow_down_1');
+
+    
+    function animatePath2(){
+        path2.animate({ d: "M111.667,119.667c21.866-14.692,44.506-28.848,52-35.333c17.333-15,20.985-16.017,38.667-34C241.305,10.697,255.833,41.667,283,65c0,0,140,86,125.333,106C393,197.667,313,175,299,201.667S327,528.333,310.333,535c-16.667,6.667-20.819-24.677-71.279-22.667c-41.245,1.643-74.882,56.681-64.721-25.333c0,0,13.728-187.181,12.667-207.339c-3.333-63.328-6-107.328-94-93.328c0,0-20.538,7.088-24-12.667C64.558,148.323,89.8,134.359,111.667,119.667z"}, 300, mina.linear);
+    }
+
+    function resetPath2(){
+        path2.animate({ d: "M177.861,208.898c0,0-4.361-26.729,20.288-13.869c16.013,8.354,39.085,12.864,77.346,1.847c9.02-2.597,31.505-18.458,24.255,9.792c0,0-22.25,167.501-9.75,244.001c4.639,28.388,4.5,42,74.5,33c38-9.5,9.848,38.651-0.5,50c-77.5,85-109.5,117-123,117c-37.5-4-136.119-116.408-143-126.169c-21.5-30.5-14.5-41.331-4.5-44.831s72.079,11.348,79.579-11.152c0,0,21.355-57.437,20.421-136.848C193,289.169,176.861,215.398,177.861,208.898z" }, 300, mina.linear);
+    }
+
+    /*
+        scroll function, show arrow up_down on scroll
+    */ 
+
+    $(document).scroll(function(){
+        if($(document).scrollTop() > 200){
+            $('.up_down_button').fadeIn('fast');
+        }
+
+    });
+
+    /*
+        toDo item open update block
+    */
+    let item_update_button = $('.list_item_footer');
+
+    item_update_button.on('click', '.fa-pencil', function(){
+        let this_update_ = $(this).parent().parent();
+        let this_update_block = $(this_update_).children('.list_item_change_block');
+        $(this_update_block).slideToggle('fast');
+    });
 
 
+    /*
+        open toggle angular toDo all app
+    */
 
+    let open_arrow_angular_todo = true;
+    $('.open_btn_angular_todo').click(function(){
+        $('#todo_angular_app').slideToggle('fast');
+        $('.open_btn_angular_todo i').toggleClass('rotate_180_deg');
+        let text = (open_arrow_angular_todo) ? 'close' : 'open';
+        $('.text_open').text(text);
+        open_arrow_angular_todo = !open_arrow_angular_todo;
 
+    });
+    
 
-
-
- 
+    /*
+        open toggle angular toDo form to add new item
+    */
+     
+    $('.open_btn_add_todo_angular').click(function(){
+        $('.angular_todo_form').slideToggle('fast'); 
+        $('.crist_add_angular_').toggleClass('rotate_45_deg');
+    });
 
 
 
