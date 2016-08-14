@@ -215,7 +215,8 @@ pr {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   padding: 30px;
-  border: 5px solid #E6E6E6;
+  border: solid #E6E6E6;
+  border-width: 2px 0 2px 0;
   -webkit-box-shadow: 0 0 6px 1px #636363;
           box-shadow: 0 0 6px 1px #636363;
 }
@@ -263,15 +264,16 @@ pr {
   display: inline-block;
 }
 .todo_angular_wrap {
-  border: 5px solid #ECECEC;
+  border: solid #ECECEC;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   padding: 15px;
   position: relative;
   margin-bottom: 50px;
-  background: #ECECEC;
+  background: #f7f7f7;
   -webkit-box-shadow: 0 0 6px 1px #636363;
           box-shadow: 0 0 6px 1px #636363;
+  border-width: 2px 0 2px 0;
   overflow: hidden;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -300,15 +302,15 @@ pr {
   bottom: 7px;
   font-size: 26px;
   background: #dddddd;
-  -webkit-box-shadow: 0 0 5px 0px #2b2b2b;
-          box-shadow: 0 0 5px 0px #2b2b2b;
+  -webkit-box-shadow: 0 0 5px 0 #2b2b2b;
+          box-shadow: 0 0 5px 0 #2b2b2b;
   cursor: pointer;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 .todo_angular_wrap .open_btn_angular_todo:hover {
-  -webkit-box-shadow: 0 0 7px 0px #2b2b2b;
-          box-shadow: 0 0 7px 0px #2b2b2b;
+  -webkit-box-shadow: 0 0 7px 0 #2b2b2b;
+          box-shadow: 0 0 7px 0 #2b2b2b;
   background: #f5f5f5;
 }
 .todo_angular_wrap .open_btn_angular_todo i {
@@ -328,14 +330,10 @@ pr {
   margin-top: 10px;
 }
 .todo_angular_wrap .list_item {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  -webkit-border-radius: 5px 0 5px 0;
+  border-radius: 5px 0 5px 0;
   background: white;
-  padding: 10px 10px 0px;
-  -webkit-border-bottom-left-radius: 0;
-          border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-          border-bottom-right-radius: 0;
+  padding: 10px 10px 0;
   border-bottom: 2px solid #AAAAAA;
 }
 .todo_angular_wrap .list_item .list_item_id {
@@ -375,8 +373,8 @@ pr {
 .todo_angular_wrap .open_btn_add_todo_angular {
   border: none;
   padding: 0 10px;
-  -webkit-box-shadow: 0 0 6px 0px #676767;
-          box-shadow: 0 0 6px 0px #676767;
+  -webkit-box-shadow: 0 0 6px 0 #676767;
+          box-shadow: 0 0 6px 0 #676767;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   outline: none;
@@ -386,8 +384,8 @@ pr {
 }
 .todo_angular_wrap .open_btn_add_todo_angular:hover {
   background: white;
-  -webkit-box-shadow: 0 0 10px 0px #676767;
-          box-shadow: 0 0 10px 0px #676767;
+  -webkit-box-shadow: 0 0 10px 0 #676767;
+          box-shadow: 0 0 10px 0 #676767;
 }
 .todo_angular_wrap .crist_add_angular_ {
   display: inline-block;
@@ -446,8 +444,8 @@ pr {
           border-radius: 5px;
   width: 100%;
   padding: 3px;
-  -webkit-box-shadow: inset 0 0 15px 0px #AAAAAA;
-          box-shadow: inset 0 0 15px 0px #AAAAAA;
+  -webkit-box-shadow: inset 0 0 15px 0 #AAAAAA;
+          box-shadow: inset 0 0 15px 0 #AAAAAA;
 }
 .todo_angular_wrap .angular_todo_list_title {
   display: block;
@@ -556,7 +554,7 @@ pr {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
-    padding-left: 0px;
+    padding-left: 0;
     border-left: none;
     padding-top: 20px;
     margin-top: 20px;
@@ -624,11 +622,10 @@ pr {
   }
 }
 .counter {
-  margin: 0 auto;
+  margin: 0 auto 100px;
   text-align: center;
   font-size: 60px;
   font-weight: bold;
-  margin-bottom: 100px;
 }
 .counter .number_wrapper {
   padding: 20px;
